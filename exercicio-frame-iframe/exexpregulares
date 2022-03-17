@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset = "utf-8">
+    <title>Expressões Regulares</title>
+</head>
+
+<body>
+    <input id = "cpf" type = "text" pĺaceholder = "Insira seu CPF(somente números)" pattern = "[0-9]{11}">
+    <input id = "btn-enviar" type = "submit" value = "enviar">
+</body>
+
+</html>
