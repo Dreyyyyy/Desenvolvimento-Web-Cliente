@@ -11,4 +11,5 @@
     <input id = "cpf" type = "text" pĺaceholder = "Insira seu CPF(somente números)" pattern = "[0-9]{11}">
     <input id = "btn-enviar" type = "submit" value = "enviar">
 </body>
+
 </html>
