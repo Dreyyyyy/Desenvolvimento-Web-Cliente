@@ -5,6 +5,12 @@
     <meta charset="utf-8" />
   </head>
   <body>
+    <header>
+      <h1>UTF Store</h1>
+    </header>
+
+    <a  href="home.html">Voltar para Home Page</a>
+
     <form class="formulario" method="post">
       <p>Para entrar em contato, por favor, preencha os campos abaixo:</p>
 
@@ -31,14 +37,16 @@
       </div>
 
       <div class="field">
-        <label for="assunto">Assunto:</label>
-        <input
-          type="assunto"
-          id="assunto"
-          name="assunto"
-          placeholder="Sugestão, reclamação, etc*"
-          required
-        />
+        <label>Assunto:
+          <select name="assunto">
+              <option value="sugestao" selected>Sugestão</option>
+              <option value="duvida">Dúvida</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="elogio">Elogio</option>
+              <option value="outro">Outro</option>
+              </optgroup>
+          </select>
+      </label>
       </div>
 
       <div class="field">
@@ -51,7 +59,9 @@
         ></textarea>
       </div>
 
-      <input type="submit" name="acao" value="Enviar" />
+      <button type="submit" name="acao">Enviar</button>
+      <button type="reset">Limpar campos</button>
     </form>
+
   </body>
 </html>
