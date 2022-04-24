@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 .header{
@@ -76,6 +75,35 @@ nav img{
     background: #f44336;
     transition: 1s;
 }
+.bottom{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+.formulario{
+    border: 1px solid #ccc;
+    max-width: 700px;
+    width:100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    background-color: rgba(2, 2, 2, 0.61);
+}
+.field{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.field input {
+    margin: 0 0 5px 0;
+    height: 20px;
+    width: calc(100% / 2 - 20px);
+}
+.field textarea{
+    height: 100px;
+    width: calc(100% / 2 - 20px);
+}
 @media(max-width: 768px){
     .nav-links ul li a{
         color: #fff;
@@ -89,11 +117,12 @@ nav img{
         text-decoration: none;
         font-size: 8px;
     }
-}
-.bottom{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    .formulario{
+        border: 1px solid #ccc;
+        max-width: 300px;
+        width:100%;
+        padding: 25px 30px;
+        border-radius: 5px;
+        background-color: rgba(2, 2, 2, 0.61);
+    }
 }
