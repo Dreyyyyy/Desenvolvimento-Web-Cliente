@@ -190,6 +190,46 @@ button:hover{
     margin-bottom: 10px;
 }
 
+.carrinho{
+    border: 1px solid grey;
+    background-color: rgba(7, 24, 96, 0.6);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.carrinho img{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.carrinho p{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.carrinho h1{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.carrinho .remover{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 @media(max-width: 768px){
     .nav-links ul li a{
         color: #fff;
