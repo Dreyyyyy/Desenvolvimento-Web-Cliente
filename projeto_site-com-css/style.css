@@ -3,10 +3,17 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-.header{
+.conteudo{
     min-height: 100vh;
     width:100%;
     background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("./img/background.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+header{
+    width:100%;
+    background-image: linear-gradient(rgb(1, 7, 30), rgb(1, 7, 30));
     background-position: center;
     background-size: cover;
     position: relative;
@@ -59,7 +66,7 @@ nav img{
 .formulario p{
     font-size: 30px;
 }
-.button{
+button{
     color:#fff;
     display: inline-block;
     text-decoration: none;
@@ -70,7 +77,7 @@ nav img{
     position: relative;
     cursor: pointer;
 }
-.button:hover{
+button:hover{
     border: 1px solid #f44336;
     background: #f44336;
     transition: 1s;
@@ -79,8 +86,8 @@ nav img{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .formulario{
     border: 1px solid #ccc;
@@ -95,20 +102,102 @@ nav img{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.field input {
+.field input{
     margin: 0 0 5px 0;
     height: 20px;
     width: calc(100% / 2 - 20px);
+}
+
+.field select{
+    margin: 0 0 5px 0;
+    height: 28px;
+    width: calc(100% / 2 - 16px);
 }
 .field textarea{
     height: 100px;
     width: calc(100% / 2 - 20px);
 }
+.banner{
+    display: flex;
+    justify-content: center;    
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.produtos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#destaque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color:#fff;
+    background-color: rgba(7, 24, 96, 0.6);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+#fundo_branco{
+    min-height: 100vh;
+    width:100%;
+    background-color: #ddd;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.produto{
+    border: 1px solid grey;
+    background-color: rgba(7, 24, 96, 0.6);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 50px;
+}
+
+.produto img{
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.produto p{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.produto h1{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.produto .comprar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 @media(max-width: 768px){
     .nav-links ul li a{
         color: #fff;
         text-decoration: none;
         font-size: 10px;
+    }
+    #destaque{
+        font-size: 18px;
     }
 }
 @media(max-width: 320px){
@@ -124,5 +213,8 @@ nav img{
         padding: 25px 30px;
         border-radius: 5px;
         background-color: rgba(2, 2, 2, 0.61);
+    }
+    #destaque{
+        font-size: 12px;
     }
 }

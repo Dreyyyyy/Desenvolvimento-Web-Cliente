@@ -1,78 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>UTF Store</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UTF Store</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Yellowtail&display=swap"
+          rel="stylesheet"
+        /> 
+      </head>
 </head>
 
 <body>
     <header>
-        <h1>UTF Store</h1>
-    </header>
-    <nav>
-        <a href="produtos.html">Nossos produtos</a> | 
-        <a href="form_cadastro.html">Faça seu cadastro</a> | 
-        <a href="form_contato.html">Entre em contato conosco</a>
-    </nav>
-    <br>
+        <nav>
+          <a href="home.html"
+            ><img src="./img/site-logo.png" alt="site_logo"
+          /></a>
+          <div class="nav-links">
+            <ul>
+              <li><a href="./home.html">PÁGINA INICIAL</a></li>
+              <li><a href="./produtos.html">PRODUTOS</a></li>
+              <li><a href="./form_cadastro.html">CADASTRE-SE</a></li>
+              <li><a href="./form_contato.html">CONTATO</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
-    <main>
-    <div class="field">
-        <picture>
-            <source media= "(min-width: 1024px)" srcset="img/banner.jpg" alt="imagem de vários carros">
-            <source media= "(min-width: 768px)" srcset="img/banner_med.jpg" alt="imagem de vários carros">
-            <img src="img/banner_small.jpg" alt="imagem de vários carros">
-        </picture>
+    <section class="conteudo">
+        <div class="banner">
+            <picture>
+                
+                <img src="img/banner.jpg" alt="imagem de vários carros" width="100%">
+            </picture>
+        </div>
+        <div id="destaque">
+            <h1>Produtos em destaque</h1>
+        </div>
+        <div id="fundo_branco">
+        <section class="produtos">
+            <section class="produto">
+                <img src="img/luzian_la01.png" alt="Imagem ilustrativa do escapamento Luzian LA01">
+                <h1>Luzian LA01</h1>
+                <p>R$ 500,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section>
+            <section class="produto">
+                <img src="img/filtro_ken.png" alt="Imagem ilustrativa do filtro de ar K&N">
+                <h1>Filtro K&N</h1>
+                <p>R$ 250,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section>
+            <section class="produto">
+                <img src="img/led_osram.png" alt="Imagem ilustrativa da lâmpada Led OSRAM">
+                <h1>Led OSRAM</h1>
+                <p>R$ 100,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section>
+            <section class="produto">
+                <img src="img/mola_eibach.png" alt="Imagem ilustrativa da mola esportiva Eibach">
+                <h1>Mola Eibach</h1>
+                <p>R$ 1.200,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section>   
+            <section class="produto">
+                <img src="img/mola_eibach.png" alt="Imagem ilustrativa da mola esportiva Eibach">
+                <h1>Mola Eibach</h1>
+                <p>R$ 1.200,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section>  
+            <section class="produto">
+                <img src="img/mola_eibach.png" alt="Imagem ilustrativa da mola esportiva Eibach">
+                <h1>Mola Eibach</h1>
+                <p>R$ 1.200,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section>
+            <section class="produto">
+                <img src="img/mola_eibach.png" alt="Imagem ilustrativa da mola esportiva Eibach">
+                <h1>Mola Eibach</h1>
+                <p>R$ 1.200,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section> 
+            <section class="produto">
+                <img src="img/mola_eibach.png" alt="Imagem ilustrativa da mola esportiva Eibach">
+                <h1>Mola Eibach</h1>
+                <p>R$ 1.200,00</p>
+                <div class="comprar">
+                    <button>Comprar</button>
+                </div>
+            </section> 
+        </section>
     </div>
-    <br>
-    <div class="field">
-        <table border="1" width="100%">
-            <caption>Produtos em destaque:</caption>
-            <thead>
-                <tr>
-                    <th>Foto ilustrativa</th>
-                    <th>Nome do produto</th>
-                    <th>Valor</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td width="40%"><img src="img/luzian_la01.png" alt="Imagem ilustrativa do escapamento Luzian LA01" width="30%"></td>
-                    <td width="30%">Abafador esportivo Luzian LA01</td>
-                    <td width="30%">R$ 450,00</td>
-                </tr>
 
-                <tr>
-                    <td width="40%"><img src="img/filtro_ken.png" alt="Imagem ilustrativa do filtro de ar K&N" width="30%"></td>
-                    <td width="30%">Filtro de ar K&N</td>
-                    <td width="30%">R$ 450,00</td>
-                </tr>
-
-                <tr>
-                    <td width="40%"><img src="img/led_osram.png" alt="Imagem ilustrativa da lâmpada Led OSRAM" width="30%"></td>
-                    <td width="30%">Lâmpada Led OSRAM</td>
-                    <td width="30%">R$ 200,00</td>
-                </tr>
-
-                <tr>
-                    <td width="40%"><img src="img/mola_eibach.png" alt="Imagem ilustrativa da mola esportiva Eibach" width="30%"></td>
-                    <td width="30%">Mola esportiva Eibach</td>
-                    <td width="30%">R$ 1300,00</td>
-                </tr>
-
-            </tbody>
-        </table>
-    </div>
-    </main>
+        
+        
+    </section>
     <hr>
-    <footer>
+    <section class="bottom">
         <p>
-			UTF Store<br>
-			Av. Monteiro Lobato, Km 4, S/N<br>
-			Brasil - Ponta Grossa - PR<br>
-            (42)3030-3030
-		</p>
-    </footer>
+          UTF Store<br />
+          Av. Monteiro Lobato, Km 4, S/N<br />
+          Brasil - Ponta Grossa - PR<br />
+          (42)3030-3030
+        </p>
+      </section>
 
 </body>
 </html>
