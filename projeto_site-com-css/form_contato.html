@@ -14,7 +14,7 @@
     /> 
   </head>
   <body>
-    <section class="header">
+    <header>
       <nav>
         <a href="home.html"
           ><img src="./img/site-logo.png" alt="site_logo"
@@ -28,6 +28,8 @@
           </ul>
         </div>
       </nav>
+      </header>
+      <section class="conteudo">
       <form class="formulario" method="post">
         <p>Para entrar em contato, por favor, preencha os campos abaixo:</p>
         <br>
@@ -52,16 +54,16 @@
           />
         </div>
         <div class="field">
-          <label>Assunto:
-            <select name="assunto">
-                <option value="sugestao" selected>Sugestão</option>
-                <option value="duvida">Dúvida</option>
-                <option value="reclamacao">Reclamação</option>
-                <option value="elogio">Elogio</option>
-                <option value="outro">Outro</option>
-                </optgroup>
-            </select>
-        </label>
+          <label for="assunto">Assunto:</label>
+          <select name="assunto" id="assunto">
+              <option value="sugestao" selected>Sugestão</option>
+              <option value="duvida">Dúvida</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="elogio">Elogio</option>
+              <option value="outro">Outro</option>
+              </optgroup>
+          </select>
+        
         </div>
         <div class="field">
           <label for="mensagem">Digite sua mensagem:</label>
@@ -73,8 +75,12 @@
           ></textarea>
         </div>
         <br />
+        <!--
         <a href="#" class="button">Enviar mensagem</a>
         <a href="#" class="button">Limpar Campos</a>
+        -->
+        <button type="submit">Registrar</button>
+        <button type="reset">Limpar Campos</button>
       </form>
     </section>
     <section class="bottom">
