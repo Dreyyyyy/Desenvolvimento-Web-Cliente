@@ -37,3 +37,54 @@ function showSlides(n) {
 
 setInterval(plusSlides, 4000);
 // Fim carrossel imagens HOME
+
+// Validação página CONTATO
+
+function validarNome(){
+    let nome = document.getElementById("nomeContato").value;
+    if(nome.length>3) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validarEmail(){
+    let email = document.getElementById("emailContato").value;
+    var re = /\S+@\S+\.\S+/;
+    if(re.test(email)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validarAssunto(){
+    let assunto = document.getElementById("assunto").value;
+    if(assunto.length>0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function validarMensagem(){
+    let msg = document.getElementById("mensagem").value;
+    if(msg.length>0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function validarTudoContato() {
+    let retornoValidacao = document.getElementById("retornoValidacao");
+    if(validarNome() && validarAssunto() && validarEmail() && validarMensagem()){
+        alert("dados enviados com sucesso");
+        return true;
+    } else {
+        //alert("Erro ao enviar");
+        retornoValidacao.textContent = "* PREENCHA OS CAMPOS CORRETAMENTE!"
+        return false;
+    }
+    
+}
