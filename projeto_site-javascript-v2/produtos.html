@@ -37,10 +37,33 @@
       <div id="destaque">
         <h1>Produtos disponíveis</h1>
       </div>
+      <div id="destaque">
+        <p>Ordenar por:
+          <select id='ordenacao' onchange="ordenaProdutos(this.value)">
+            <option value='0'></option>
+            <option value='nomeCresc'>Nome Crescente</option>
+            <option value='nomeDecresc'>Nome Decrescente</option>
+            <option value='valorCresc'>Valor Crescente</option>
+            <option value='valorDecresc'>Valor Decrescente</option>
+         </select>
+        </p>
+      </div>
       <div id="fundo_branco">
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="imgProduto" src="" width=40%/>
+            <h1 id="nomeProduto"></h1>
+            <p id="textoProduto"></p>
+            <p id="valorProduto"></p>
+            <button id="btnComprar">Comprar</button>
+          </div>
+        </div>
+
         <section class="produtos">
           <!--Redenderizar produtos aqui-->
         </section>
+        
       </div>
     </section>
     <!-- Carrinho-->
