@@ -3,6 +3,102 @@ const produtosEl = document.querySelector(".produtos");
 const itemCarrinhoEl = document.querySelector(".item-carrinho");
 const totalEl = document.querySelector(".carrinho");
 
+//Renderizar os produtos
+function renderizarProdutos() {
+    produtosEl.innerHTML = "";
+    produtos.forEach( (produto) => {
+        produtosEl.innerHTML += `
+            <section class="produto">
+                <img
+                src="${produto.imgSrc}"
+                alt="${produto.nome}"
+                onclick="abreModal(${produto.id})"
+                />
+                <h1 onclick="abreModal(${produto.id})">${produto.nome}</h1>
+                <p>R$</small>${produto.preco}</p>
+                <div class="comprar">
+                <button onclick="addCarrinho(${produto.id})">Comprar</button>
+                </div>
+            </section>
+            `;
+    });
+}
+renderizarProdutos();
+
+function ordenaProdutos(value){
+    if (value == 'nomeCresc'){
+        produtos.sort((a, b) => {
+            if (a.nome < b.nome)
+                return -1;
+            if (a.nome > b.nome)
+                return 1;
+            return 0;
+        });
+        renderizarProdutos();
+    } else if (value == 'nomeDecresc') {
+        produtos.sort((a, b) => {
+            if (a.nome > b.nome)
+                return -1;
+            if (a.nome < b.nome)
+                return 1;
+            return 0;
+        });
+        renderizarProdutos();
+    } else if (value == 'valorCresc') {
+        produtos.sort((a, b) => {
+            if (a.preco < b.preco)
+                return -1;
+            if (a.preco > b.preco)
+                return 1;
+            return 0;
+        });
+        renderizarProdutos();
+    } else if (value == 'valorDecresc') {
+        produtos.sort((a, b) => {
+            if (a.preco > b.preco)
+                return -1;
+            if (a.preco < b.preco)
+                return 1;
+            return 0;
+        });
+        renderizarProdutos();
+    } else {
+        renderizarProdutos();
+    }
+}
+
+// SCRIPT MODAL PRODUTOS
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+function abreModal(id) {
+    let imgTag = document.getElementById("imgProduto");
+    let h1Tag = document.getElementById("nomeProduto");
+    let pTag = document.getElementById("textoProduto");
+    let valorTag = document.getElementById("valorProduto");
+    let btnComprar = document.getElementById("btnComprar");
+    let produto = produtos.find((produto) => produto.id === id);
+    imgTag.setAttribute('src', produto.imgSrc);
+    h1Tag.textContent = produto.nome;
+    pTag.textContent = produto.descricao;
+    valorTag.textContent = "R$ " + produto.preco;
+    btnComprar.setAttribute('onclick', "closeModal()");
+
+    modal.style.display = "block";
+
+}
+function closeModal(){
+    modal.style.display = "none";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 // Array do carrinho
 let carrinho = JSON.parse(localStorage.getItem("CART")) || [];
 atualizarCarrinho();
