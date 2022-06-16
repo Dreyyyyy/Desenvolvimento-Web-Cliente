@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>UTF Store</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Yellowtail&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="home.html"
+          ><img src="./img/site-logo.png" alt="site_logo"
+        /></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="./home.html">PÁGINA INICIAL</a></li>
+            <li><a href="./produtos.html">PRODUTOS</a></li>
+            <li><a href="./carrinho.html">CARRINHO</a></li>
+            <li><a href="./form_cadastro.html">CADASTRE-SE</a></li>
+            <li><a href="./form_contato.html">CONTATO</a></li>
+            <li><a href="./login.html">LOGIN</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="conteudo">
+      <div id="destaque">
+        <h1>Produtos disponíveis</h1>
+      </div>
+      <div id="destaque">
+        <p>Ordenar por:
+          <select id='ordenacao' onchange="ordenaProdutos(this.value)">
+            <option value='0'></option>
+            <option value='nomeCresc'>Nome Crescente</option>
+            <option value='nomeDecresc'>Nome Decrescente</option>
+            <option value='valorCresc'>Valor Crescente</option>
+            <option value='valorDecresc'>Valor Decrescente</option>
+         </select>
+        </p>
+      </div>
+      <div id="fundo_branco">
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="imgProduto" src="" width=40%/>
+            <h1 id="nomeProduto"></h1>
+            <p id="textoProduto"></p>
+            <p id="valorProduto"></p>
+            <button id="btnComprar">Comprar</button>
+          </div>
+        </div>
+
+        <section class="produtos">
+          <!--Redenderizar produtos aqui-->
+        </section>
+        
+      </div>
+    </section>
+    <!-- Carrinho-->
+    <section class="conteudo">
+        <div id="destaque">
+            <h1>Carrinho</h1>
+        </div>
+        <div id="fundo_branco">
+        <section class="item-carrinho">
+          <!-- Renderizar carrinho aqui -->
+        </section>
+        <section class="carrinho">
+          <!-- Renderizar valor total aqui -->
+        </section>
+        <div class="finalizar">
+          <button onclick="window.location.href='carrinho.html'">Ir para o carrinho</button>
+        </div>
+    </section>
+
+    <hr />
+    <section class="bottom">
+      <p>
+        UTF Store<br />
+        Av. Monteiro Lobato, Km 4, S/N<br />
+        Brasil - Ponta Grossa - PR<br />
+        (42)3030-3030
+      </p>
+    </section>
+
+    <script src="./produtos.js"></script>
+    <script src="./script_produtos.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>
