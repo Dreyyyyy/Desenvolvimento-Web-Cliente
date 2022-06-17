@@ -347,6 +347,20 @@ button:hover{
     cursor: pointer;
 }
 
+.cupom {
+    background-color: rgba(7, 24, 96, 0.6);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.cupom-field{
+    margin: 0 0 5px 0;
+    height: 15px;
+    width: 180px;
+}
+
 .finalizar {
     background-color: rgba(7, 24, 96, 0.6);
     display:flex;

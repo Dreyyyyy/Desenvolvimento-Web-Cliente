@@ -26,6 +26,7 @@
             <li><a href="./carrinho.html">CARRINHO</a></li>
             <li><a href="./form_cadastro.html">CADASTRE-SE</a></li>
             <li><a href="./form_contato.html">CONTATO</a></li>
+            <li><a href="./login.html">LOGIN</a></li>
           </ul>
         </div>
       </nav>
@@ -34,7 +35,7 @@
       <form
         class="formulario"
         method="post"
-        onsubmit="return validarTudoCadastro()"
+        onsubmit="return validarTudoCadastro() && armazenaCadastro(document.getElementById('email').value, document.getElementById('senha').value)"
       >
         <p>Para fazer seu cadastro, preencha os campos abaixo:</p>
         <br />
@@ -123,5 +124,6 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>

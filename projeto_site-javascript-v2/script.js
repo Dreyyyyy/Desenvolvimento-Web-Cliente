@@ -263,5 +263,6 @@ function validarTudoCadastro(){
 
 //FIM validação PÁGINA CADASTRO
 
+
 // ORDENAR DIVS: https://pt.stackoverflow.com/questions/46368/como-ordenar-tr%C3%AAs-divs-de-acordo-com-um-atributo-dela
 

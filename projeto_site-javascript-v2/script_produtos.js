@@ -2,6 +2,7 @@
 const produtosEl = document.querySelector(".produtos");
 const itemCarrinhoEl = document.querySelector(".item-carrinho");
 const totalEl = document.querySelector(".carrinho");
+var cupomUt = 0;
 
 //Renderizar os produtos
 function renderizarProdutos() {
@@ -129,18 +130,40 @@ function atualizarCarrinho() {
 }
 
 //Calcular e renderizar o total
-function renderizarTotal() {
+function renderizarTotal(op) {
     let valorTotal = 0, qtdItens = 0;
     carrinho.forEach((item) => {
         valorTotal += item.preco * item.numUnidades;
         qtdItens += item.numUnidades;
     }); 
-    if (qtdItens == 1) {
-        totalEl.innerHTML = ` <p>Valor Total (${qtdItens} Item): R$${valorTotal.toFixed(2)}</p> `;
+    if (op == 1 && cupomUt == 1) {
+        valorTotal -= (valorTotal * 0.15);
+        if (qtdItens == 1) {
+            totalEl.innerHTML = ` <p>Valor Total (${qtdItens} Item): R$${valorTotal.toFixed(2)}</p> `;
+        }
+        else {
+            totalEl.innerHTML = ` <p>Valor Total (${qtdItens} Itens): R$${valorTotal.toFixed(2)}</p> `;
+        } 
     }
     else {
-        totalEl.innerHTML = ` <p>Valor Total (${qtdItens} Itens): R$${valorTotal.toFixed(2)}</p> `;
-    }    
+        if (qtdItens == 1) {
+            totalEl.innerHTML = ` <p>Valor Total (${qtdItens} Item): R$${valorTotal.toFixed(2)}</p> `;
+        }
+        else {
+            totalEl.innerHTML = ` <p>Valor Total (${qtdItens} Itens): R$${valorTotal.toFixed(2)}</p> `;
+        } 
+    }       
+}
+
+function addCupom() {
+    let cupom = document.getElementById('cupom').value;
+    let UTFPR = "UTFPR";
+    console.log(cupom);
+    console.log(UTFPR);
+    if (cupom === UTFPR) {
+        cupomUt = 1;
+        renderizarTotal(1);
+    }
 }
 
 //Renderizar itens do carrinho
