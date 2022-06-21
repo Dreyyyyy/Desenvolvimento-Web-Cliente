@@ -158,8 +158,6 @@ function renderizarTotal(op) {
 function addCupom() {
     let cupom = document.getElementById('cupom').value;
     let UTFPR = "UTFPR";
-    console.log(cupom);
-    console.log(UTFPR);
     if (cupom === UTFPR) {
         cupomUt = 1;
         renderizarTotal(1);
