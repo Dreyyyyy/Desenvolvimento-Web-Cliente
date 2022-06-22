@@ -87,7 +87,6 @@ function validarTudoContato() {
     if(validarNome() && validarAssunto() && validarEmail() && validarMensagem()){
         return true;
     } else {
-        //alert("Erro ao enviar");
         retornoValidacao.textContent =  "* Erro ao enviar formulário: " + erro;
         return false;
     }

@@ -32,11 +32,7 @@
       </nav>
     </header>
     <section class="conteudo">
-      <form
-        class="formulario"
-        method="post"
-        onsubmit="return validaLogin(document.getElementById('email').value, document.getElementById('senha').value)"
-      >
+      <form class="formulario" method="post">
         <p>Login</p>
         <br />
         <div class="field">
@@ -53,15 +49,19 @@
           <label for="senha">Senha:</label>
           <input type="password" id="senha" name="senha" required />
         </div>
+        <section class="login">
+          <!--renderiza login-->
+        </section>
         <br />
-        <!--
-        <a href="#" class="button">Registrar</a>
-        <a href="#" class="button">Limpar Campos</a>
-        -->
         <p id="retornoValidacao" style="font-size: 18px; color: red"></p>
         <br />
 
-        <button type="submit">Login</button>
+        <button
+          type="submit"
+          onclick="validaLogin(document.getElementById('email').value, document.getElementById('senha').value)"
+        >
+          Login
+        </button>
         <button type="submit" onclick="return logout()">Logout</button>
       </form>
     </section>

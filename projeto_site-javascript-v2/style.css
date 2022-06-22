@@ -369,6 +369,15 @@ button:hover{
     margin-bottom: 10px;
 }
 
+.msg-final {
+    background-color: rgba(7, 24, 96, 0.6);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
 @media(max-width: 768px){
     .nav-links ul li a{
         color: #fff;
